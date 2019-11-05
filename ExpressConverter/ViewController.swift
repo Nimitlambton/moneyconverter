@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var currencyTwo: UITextField!
     
     
+    @IBOutlet weak var test: UILabel!
     
     @IBAction func convertbtn(_ sender: Any) {
         
