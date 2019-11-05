@@ -63,7 +63,8 @@ class ViewController:  UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     }
 
    var one : Double = 0.0
-    var Two : Double = 0.0
+   var Two : Double = 0.0
+   
     
     
     
@@ -80,7 +81,7 @@ class ViewController:  UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     
     
     @IBAction func convertbtn(_ sender: Any) {
-        
+       /*
         
         one = Double(currencyOne.text! ) ?? 0
              
@@ -93,6 +94,24 @@ class ViewController:  UIViewController, UIPickerViewDelegate, UIPickerViewDataS
               
               currencyTwo.text = String(convertedAmount)
               
+       */
+        
+        one = Double(currencyOne.text! ) ?? 0
+        
+         
+         
+        //two = Double(currencyTwo.text!) ?? 0
+        
+        let abc = current.text
+        
+        switch abc  {
+        case "EURO":
+            currencyTwo.text = ("\(one * 80)")
+        default: break
+            
+        }
+        
+        
         
     }
     
