@@ -23,6 +23,9 @@ class ViewController:  UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     @IBOutlet weak var picker: UIPickerView!
     
     
+    @IBOutlet var current: UILabel!
+    
+    
      var pickerdata = ["USA" , "EURO" ,"CAD"]
     
     
@@ -34,12 +37,20 @@ class ViewController:  UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
          return pickerdata.count    }
    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int)-> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int )-> String? {
        var abc = pickerdata[row]
         return pickerdata[row]
      }
     
 
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        current.text = pickerdata[row]
+        
+        
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
