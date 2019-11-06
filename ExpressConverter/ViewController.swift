@@ -58,6 +58,7 @@ class ViewController:  UIViewController, UIPickerViewDelegate, UIPickerViewDataS
                // Do any additional setup after loading the view. self.picker.delegate = self
     self.picker.delegate = self
     self.picker.dataSource = self
+    current.text = "CAD"
         
     
     }
@@ -81,33 +82,26 @@ class ViewController:  UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     
     
     @IBAction func convertbtn(_ sender: Any) {
-       /*
-        
-        one = Double(currencyOne.text! ) ?? 0
-             
-              
-              
-              //two = Double(currencyTwo.text!) ?? 0
-              
-              
-        let convertedAmount = one * 56
-              
-              currencyTwo.text = String(convertedAmount)
-              
-       */
+      
         
         one = Double(currencyOne.text! ) ?? 0
         
          
          
-        //two = Double(currencyTwo.text!) ?? 0
+        
         
         let abc = current.text
         
         switch abc  {
-        case "EURO":
+            case "EURO":
             currencyTwo.text = ("\(one * 80)")
+            case "USA":
+            currencyTwo.text = ("\(one * 72)")
+            case "CAD":
+            currencyTwo.text = ("\(one * 56)")
+            
         default: break
+            
             
         }
         
